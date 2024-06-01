@@ -4,9 +4,11 @@ project(myLib VERSION 0.1 LANGUAGES CXX)
 
 set(TARGET_NAME_LIB myLib)
 add_library(${TARGET_NAME_LIB} INTERFACE)
+
+
 target_include_directories(${TARGET_NAME_LIB} INTERFACE 
-$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/myLib>
-$<INSTALL_INTERFACE:include/myLib>
+$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+$<INSTALL_INTERFACE:include>
 )
 add_subdirectory(myLib)
 
